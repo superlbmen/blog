@@ -1,4 +1,4 @@
-package interfaceDemo;
+package interfacedemo;
 
 /**
  * 动物抽象类

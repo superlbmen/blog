@@ -1,4 +1,4 @@
-package interfaceDemo;
+package interfacedemo;
 
 /**
  * 抽象的动作行为类

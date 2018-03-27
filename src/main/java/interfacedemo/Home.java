@@ -1,4 +1,4 @@
-package interfaceDemo;
+package interfacedemo;
 
 /**
  * 家庭抽象类
