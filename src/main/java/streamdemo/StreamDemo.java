@@ -12,6 +12,11 @@ import java.util.stream.Collectors;
  */
 public class StreamDemo {
 
+    public StreamDemo(){
+        beforeJava7(userList()).forEach(n-> System.out.println(n));
+        nowJava8(userList()).forEach(n-> System.out.println("stream "+n));
+    }
+
     /**
      * java7之前，只能从数据库取出数据遍历
      * 然后存储到新的数据结构
@@ -54,5 +59,24 @@ public class StreamDemo {
                 .collect(Collectors.toList());
 
         return userNames;
+    }
+
+    /**
+     * 生成测试数据
+     * @return
+     */
+    private List<User> userList(){
+        List<User> userList = new ArrayList<>();
+        for(int i = 15; i < 25; i++){
+            User user = new User();
+            user.setName("AA"+i);
+            user.setAge(i);
+            userList.add(user);
+        }
+        return userList;
+    }
+
+    public static void main(String[] args){
+        new StreamDemo();
     }
 }
