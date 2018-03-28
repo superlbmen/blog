@@ -1,9 +1,6 @@
 package streamdemo;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -76,7 +73,32 @@ public class StreamDemo {
         return userList;
     }
 
+    /**
+     * 用户实体类
+     */
+    private class User{
+        private String name;
+        private int age;
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public int getAge() {
+            return age;
+        }
+
+        public void setAge(int age) {
+            this.age = age;
+        }
+    }
+
     public static void main(String[] args){
         new StreamDemo();
+        System.exit(0);
     }
 }
